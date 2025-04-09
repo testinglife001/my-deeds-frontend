@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://my-deeds-backend.onrender.com";
+const BASE__URL = "http://localhost:5000";
 
 export const CreateUser = async (userObj) => {
     // const url = `${BASE_URL}/api/auth/create-user`;
