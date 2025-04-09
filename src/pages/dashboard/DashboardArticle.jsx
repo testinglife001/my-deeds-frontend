@@ -89,10 +89,11 @@ const DashboardArticle = ({history}) => {
                         <tbody>
 
                             {
-                                allArticle.length > 0 ?
+                                // allArticle.length > 0 ?
+                                allArticle &&
                                 allArticle.map((art, index) => 
                                     
-                                    <tr>
+                                    <tr key={index} >
                                         <th scope="row">{index}</th>
                                         <td>{art.title}</td>
                                         {/* 
@@ -164,8 +165,8 @@ const DashboardArticle = ({history}) => {
                                     </tr>
                                     
                                 )
-                                :
-                                "Article not found ..."
+                                // :
+                                // "Article not found ..."
                             }
 
                             

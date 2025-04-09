@@ -31,7 +31,8 @@ const HomePost = (props) => {
         <div className="blogPostContainer">
 
         {
-            allArticle.length > 0 ?
+            // allArticle.length > 0 ?
+            allArticle &&
             allArticle.map((art,index) => 
                 <Card key={index} >
                     <div className="blogHeader">
@@ -64,8 +65,9 @@ const HomePost = (props) => {
                     </div>
                     
                 </Card>
-            ) : 
-                <h3>Article not found ...</h3>
+            ) 
+            // : 
+            //    <h3>Article not found ...</h3>
         }
 
         {

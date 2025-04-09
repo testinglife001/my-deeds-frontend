@@ -268,16 +268,18 @@ const ArticleAdd = ({history}) => {
 
                 {
                     
-                    allCategory.length > 0 ?
+                    // allCategory.length > 0 ?
+                    allCategory &&
                     allCategory.map((c,index) => {
                         return (
                             <option key={index} value={c.categorySlug} >
                                 {c.categoryName}
                             </option>
                         )
-                    })
-                    :
-                    ''
+                    }
+                    )
+                    // :
+                    // ''
                     
                 }
 
@@ -303,16 +305,18 @@ const ArticleAdd = ({history}) => {
 
                 {
                     
-                    allTag.length > 0 ?
+                    // allTag.length > 0 ?
+                    allTag &&
                     allTag.map((t,index) => {
                         return (
                             <option key={index} value={t.tagSlug} >
                                 {t.tagName}
                             </option>
                         )
-                    })
-                    :
-                    '' 
+                    }
+                    )
+                    // :
+                    // '' 
                     
                 }
 
