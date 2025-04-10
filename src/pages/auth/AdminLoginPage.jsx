@@ -60,8 +60,8 @@ const AdminLoginPage = ({ history }) => {
     
         try {
             // await axios.post(`${backend_url}/user/login`,data, { withCredentials: true })
-            // const res = await newRequest.post("auth/admin-login", {
-             const res = await newRequest.post("/auth/admin_login", {  
+             const res = await newRequest.post("auth/admin-login", {
+            // const res = await newRequest.post("/auth/admin_login", {  
                 // email, 
                 // password
                  state 
