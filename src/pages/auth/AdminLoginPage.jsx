@@ -6,6 +6,7 @@ import { useAuthStore } from '../../authStore/authStore';
 import { useDispatch, useSelector } from 'react-redux';
 import { admin_login } from '../../store/actions/authAction';
 import newRequest from '../../utils/newRequest';
+import axios from 'axios';
 
 
 const AdminLoginPage = ({ history }) => {
@@ -60,13 +61,14 @@ const AdminLoginPage = ({ history }) => {
     
         try {
             // await axios.post(`${backend_url}/user/login`,data, { withCredentials: true })
-             const res = await newRequest.post("auth/admin-login", {
+            // const res = await newRequest.post("auth/admin-login", {
             // const res = await newRequest.post("/auth/admin_login", {  
+            const res = await axios.post("https://my-deeds-backend.onrender.com/api/auth/admin-login", {
                 // email, 
                 // password
                  state 
             });
-             console.log(res.data);
+            console.log(res.data);
             // localStorage.setItem("user", JSON.stringify(res.data));
             // navigate("/"); 
     
