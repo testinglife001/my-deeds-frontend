@@ -28,6 +28,7 @@ import HomeFour from './pages/home/HomeFour';
 import HomeFive from './pages/home/HomeFive';
 import PostForm from './pages/home/PostForm';
 import PostList from './pages/home/PostList';
+import AdminLogin from './pages/auth/AdminLogin';
 
 
 
@@ -90,7 +91,8 @@ function App() {
         
 
 
-        <Route path="/admin/login" component={AdminLoginPage} exact />           
+        <Route path="/admin/login" component={AdminLoginPage} exact />
+        <Route path="/admin-login" component={AdminLogin} exact />           
                     
         {/* 
         <Route path="/dashboard" component={Home} exact />
