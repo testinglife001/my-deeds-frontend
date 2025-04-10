@@ -9,7 +9,7 @@ const AdminLogin = () => {
         e.preventDefault();
         try {
             console.log(email,password);
-        const res = await axios.post('https://my-deeds-backend.onrender.com/api/auth/admin_login', {
+        const res = await axios.post('https://my-deeds-backend.onrender.com/api/auth/admin/login', {
             email,
             password,
         });
