@@ -34,7 +34,7 @@ const Home = () => {
             Home Post
           </Link>
           <br/>
-          <Link to="/article/:currentPage?" >
+          <Link to="/article" >
             Home Post Article
           </Link>
 
