@@ -3,7 +3,7 @@ import axios from "axios";
 export const get_tag_category = () => async (dispatch) => {
     try {
         // console.log('okko');
-        const response = await axios.get(`/api/dashboard/get-tag-category`, 
+        const response = await axios.get(`https://my-deeds-backend.onrender.com/api/dashboard/get-tag-category`, 
             // data,
                 {
                     withCredentials: true
