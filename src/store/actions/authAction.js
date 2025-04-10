@@ -9,7 +9,7 @@ export const admin_login = (data) => async (dispatch) => {
     })
     try {
         // console.log("ok");
-        const response = await axios.post('/api/auth/admin-login', 
+        const response = await axios.post('https://my-deeds-backend.onrender.com/api/auth/admin-login', 
             data, 
             {
                 withCredentials: true
