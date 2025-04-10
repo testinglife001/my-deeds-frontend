@@ -14,7 +14,7 @@ const ArticleAdd = ({history}) => {
 
     const {allCategory, allTag, loader, articleError, articleSuccessMessage}  = 
         useSelector(state=>state.dashboardArticleReducer);
-    
+    console.log(allCategory);
 
     const [text, setText] = useState('');
     const editor = useRef();
