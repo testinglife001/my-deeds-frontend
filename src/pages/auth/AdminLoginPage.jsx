@@ -5,6 +5,7 @@ import { EyeIcon, EyeOffIcon, Mail } from 'lucide-react';
 import { useAuthStore } from '../../authStore/authStore';
 import { useDispatch, useSelector } from 'react-redux';
 import { admin_login } from '../../store/actions/authAction';
+import newRequest from '../../utils/newRequest';
 
 
 const AdminLoginPage = ({ history }) => {
@@ -15,7 +16,7 @@ const AdminLoginPage = ({ history }) => {
             authenticate, userInfo} 
         = useSelector(state=>state.adminReducer);
 
-    console.log({userInfo});
+    // console.log({userInfo});
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -41,7 +42,7 @@ const AdminLoginPage = ({ history }) => {
     // const AdminLogin = async(e) => {
     const AdminLogin = (e) => {
         e.preventDefault();
-         console.log({email,password});
+        // console.log({email,password});
         // await adminLogin(email,password);
         
         // dispatch(admin_login({email,password}));
@@ -49,6 +50,31 @@ const AdminLoginPage = ({ history }) => {
         // history.push('/dashboard');
         // history.push('/');
     }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+         console.log(email);
+         console.log(password);
+         console.log({email,password});
+         console.log(state);
+    
+        try {
+            // await axios.post(`${backend_url}/user/login`,data, { withCredentials: true })
+            const res = await newRequest.post("auth/admin-login", { 
+                 email, 
+                 password
+                // state 
+            });
+             console.log(res.data);
+            // localStorage.setItem("user", JSON.stringify(res.data));
+            // navigate("/"); 
+    
+        } catch (error) {
+            // setError(error.response.data);
+            console.log(error);
+        }
+    
+      }
 
     useEffect(() => {
         if(authenticate){
@@ -94,7 +120,10 @@ const AdminLoginPage = ({ history }) => {
                 
                 <div style={{width:'500px',marginLeft:'350px'}} >
                     
-                    <form onSubmit={AdminLogin} >
+                    <form 
+                        //onSubmit={AdminLogin}
+                        onSubmit={handleSubmit} 
+                        >
                         
                         <div className=" py-3">
                         <input
