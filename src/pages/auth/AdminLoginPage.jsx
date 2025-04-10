@@ -41,12 +41,12 @@ const AdminLoginPage = ({ history }) => {
     // const AdminLogin = async(e) => {
     const AdminLogin = (e) => {
         e.preventDefault();
-        // console.log({email,password});
+         console.log({email,password});
         // await adminLogin(email,password);
         
         // dispatch(admin_login({email,password}));
          dispatch(admin_login(state));
-         history.push('/dashboard');
+        // history.push('/dashboard');
         // history.push('/');
     }
 
